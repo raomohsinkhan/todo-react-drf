@@ -4,6 +4,30 @@ from rest_framework.response import Response
 from .models import Task
 # Create your views here.
 
+def home(request):
+	return render(request, 'home.html', {'name':'I am a good boy.'})
+	#return HttpResponse("Hello World!<br>I am Rao Mohsin learning Python Django.")
+def index(request):
+    return render(request, 'home.html')
+
+def add(request):
+	val1 = int(request.POST['num1'])
+	val2 = int(request.POST['num2'])
+	myres = val1 + val2
+	return render(request, 'result.html', {'results':myres})
+
+def home2(request):
+	return render(request, 'home2.html', {'name':'I am a good boy. and this is a home2 page'})
+	#return HttpResponse("Hello World!<br>I am Rao Mohsin learning Python Django.")
+
+def divide(request):
+	return render(request, 'home2.html', {'name':'I am a good boy. and this is a divide page'})
+
+def multiplay(request):
+	return render(request, 'home2.html', {'name':'I am a good boy. and this is a multiplay page'})
+
+
+
 @api_view(['GET'])
 def api_details(request):
     api_endpoints = {
