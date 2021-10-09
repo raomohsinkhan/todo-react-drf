@@ -15,12 +15,32 @@ def add(request):
     return HttpResponse("Hello World!<br>I am Rao Mohsin learning Python Django.")
 
 def Add(request):
-	#val1 = int(request.POST['num1'])
-	#val2 = int(request.POST['num2'])
-	#myres = val1 + val2
-    myres = 'abc'
+    val1 = int(request.POST['num1'])
+    val2 = int(request.POST['num2'])
+    myres = val1 + val2
     return render(request, 'result.html', {'results':myres})
+    
 	
+def t1(request):
+    return render(request, 'home2.html', {'name':'I am a good boy. and this is a t1 page'})
+def t2(request):
+    return render(request, 'home2.html', {'name':'I am a good boy. and this is a t2 page'})
+def t3(request):
+    return render(request, 'home2.html', {'name':'I am a good boy. and this is a t3 page'})
+def t4(request):
+    return render(request, 'home2.html', {'name':'I am a good boy. and this is a t4 page'})
+def t5(request):
+    return render(request, 'home2.html', {'name':'I am a good boy. and this is a t5 page'})
+def t6(request):
+    return render(request, 'home2.html', {'name':'I am a good boy. and this is a t6 page'})
+def t7(request):
+    return render(request, 'home2.html', {'name':'I am a good boy. and this is a t7 page'})
+def t8(request):
+    return render(request, 'home2.html', {'name':'I am a good boy. and this is a t8 page'})
+def t9(request):
+    return render(request, 'home2.html', {'name':'I am a good boy. and this is a t9 page'})
+def t10(request):
+    return render(request, 'home2.html', {'name':'I am a good boy. and this is a t10 page'})
 
 def home2(request):
 	return render(request, 'home2.html', {'name':'I am a good boy. and this is a home2 page'})
