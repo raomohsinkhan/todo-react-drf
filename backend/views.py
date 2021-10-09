@@ -1,3 +1,4 @@
+from django.http.response import HttpResponse
 from django.shortcuts import render
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -8,13 +9,18 @@ def home(request):
 	return render(request, 'home.html', {'name':'I am a good boy.'})
 	#return HttpResponse("Hello World!<br>I am Rao Mohsin learning Python Django.")
 def index(request):
-    return render(request, 'home.html')
+    return render(request, 'home.html', {'name':'I am a good boy. This is from Rao Mohsin<br>I am a good boy too.'})
 
 def add(request):
-	val1 = int(request.POST['num1'])
-	val2 = int(request.POST['num2'])
-	myres = val1 + val2
-	return render(request, 'result.html', {'results':myres})
+    return HttpResponse("Hello World!<br>I am Rao Mohsin learning Python Django.")
+
+def Add(request):
+	#val1 = int(request.POST['num1'])
+	#val2 = int(request.POST['num2'])
+	#myres = val1 + val2
+    myres = 'abc'
+    return render(request, 'result.html', {'results':myres})
+	
 
 def home2(request):
 	return render(request, 'home2.html', {'name':'I am a good boy. and this is a home2 page'})
@@ -22,6 +28,10 @@ def home2(request):
 
 def divide(request):
 	return render(request, 'home2.html', {'name':'I am a good boy. and this is a divide page'})
+
+def sum(request):
+	return render(request, 'home.html', {'name':'I am a good boy. and this is a sum page'})
+
 
 def multiplay(request):
 	return render(request, 'home2.html', {'name':'I am a good boy. and this is a multiplay page'})

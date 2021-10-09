@@ -24,4 +24,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('backend.urls')),
     path('', backend.views.index, name='index'),
+    path('Add',backend.views.Add,name='Add'),
+    path('add',backend.views.add,name='add'),
+    path('sum',backend.views.sum,name='sum'),
+    path('divide',backend.views.divide,name='divide'),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
